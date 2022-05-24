@@ -12,7 +12,7 @@ This is our very bare-bones/buggy application for managing vehicles at a car dea
 3. There is a method to print out the vehicle data in the main application code. It would make sense move that logic to the `Vehicle` class as a `toString()` method. 
 
     *Bonus: Try to print out all the properties (with the exception of features). This includes properties specific to SUVs and Sedans.* 
-    ![Screenshot](./screenshot1.png)
+    ![Screenshot](https://github.com/nansen/JuniorDevCodingChallenge/blob/main/screenshot1.PNG)
 
 4. Our dealership is going to expand beyond sedans and suvs. We want to start selling vans as well. Add a new class for vans. The vans share the same properties as other vehicles, with the exception they have properties indicating if it comes equipt with a sun roof and a built in screen for the back seats. Inside the `MockDataService.java` file, you will see some code commented out that you can leverage when testing your newly created Van class.
 
