@@ -48,6 +48,7 @@ public class Main {
 					break;
 				case 3:
 					reserveVehicle();
+					break;
 				case 4:
 				default:
 					System.out.println("Application closing");
@@ -74,9 +75,6 @@ public class Main {
 		}
 		catch(Exception e) {
 			System.out.println("Error reserving vehicle inventory: " + e.getMessage());
-		}
-		finally {
-			userInputScanner.close();
 		}
 	}
 
@@ -108,9 +106,6 @@ public class Main {
 		}
 		catch(Exception e) {
 			System.out.println("Error searching inventory: " + e.getMessage());
-		}
-		finally {
-			userInputScanner.close();
 		}
 	}
 
