@@ -7,6 +7,7 @@ import java.util.Map;
 
 import BusinessObjects.Suv;
 import BusinessObjects.Vehicle;
+import Exceptions.IllegalVinNumberException;
 
 public class InventoryService {
 	
@@ -31,7 +32,9 @@ public class InventoryService {
 	public List<Vehicle> searchVehicles(boolean isSuv, int minMpg, BigDecimal minPrice, BigDecimal maxPrice, HashMap<String,String> features){
 		//filter based on criteria
 		var filteredResults = currentInventory.stream().filter(v -> !v.isReserved && 
-				((v instanceof Suv) == isSuv) && 
+				((v instanceof Suv) == isSuv) &&
+				v.mpgCity >= minMpg &&
+				v.mpgHighway >= minMpg &&
 				v.msrp.compareTo(minPrice) >= 0 && v.msrp.compareTo(maxPrice) <= 0).toList();
 		
 		//filter based on features
@@ -46,4 +49,14 @@ public class InventoryService {
 	
 	// TODO Create a method for reserving a vehicle
 	// Hint: This doesn't need to do anything more than setting the appropriate property on the vehicle
+
+	public void reserveVehicle(String theVinNumber){
+		for(int i=0; i<getCurrentInventory().size(); i++){
+			if(getCurrentInventory().get(i).vinNumber.equals(theVinNumber)) {
+				getCurrentInventory().get(i).isReserved = true;
+				return;
+			}
+		}
+		throw new IllegalVinNumberException("This Vin number is not available or has been reserved.");
+	}
 }
