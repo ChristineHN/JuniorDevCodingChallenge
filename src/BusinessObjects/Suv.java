@@ -5,6 +5,15 @@ package BusinessObjects;
  * 
  */
 public class Suv extends Vehicle {
+	@Override
+	public String toString() {
+		return super.toString()+
+				" | Towing Capacity: " + towingCapacityLBs + "LBs" +
+				" | Cargo Capacity: " + cargoCapacitySqft + "sqft" +
+				" | AWD: " + allWheelDrive +
+				" | 4 Wheel Drive: " + fourWheelDrive;
+	}
+
 	//SUVs towing capacity
 	public int towingCapacityLBs;
 	//SUVs total cargo space
