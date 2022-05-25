@@ -7,6 +7,7 @@ import java.util.List;
 import BusinessObjects.Sedan;
 import BusinessObjects.Suv;
 //import BusinessObjects.Van;
+import BusinessObjects.Van;
 import BusinessObjects.Vehicle;
 
 /*
@@ -127,19 +128,19 @@ public class MockDataService implements IDataService {
 		
 		vehicles.add(tiguan2);
 		
-		// Van van = new Van();
+		 Van van = new Van();
 		
-		// van.model = "Van";
-		// van.vinNumber = "fd3ga9ks1ljn1k";
-		// van.color = "yellow";
-		// van.msrp = new BigDecimal("35985.00");
-		// van.mpgCity = 18;
-		// van.mpgHighway = 26;
-		// van.isReserved = false;
-		// van.hasSunRoof = true;
-		// van.entertainmentScreen = true;
+		 van.model = "Van";
+		 van.vinNumber = "fd3ga9ks1ljn1k";
+		 van.color = "yellow";
+		 van.msrp = new BigDecimal("35985.00");
+		 van.mpgCity = 18;
+		 van.mpgHighway = 26;
+		 van.isReserved = false;
+		 van.hasSunRoof = true;
+		 van.entertainmentScreen = true;
 		
-		// vehicles.add(van);
+		 vehicles.add(van);
 		
 		return vehicles;
 	}
