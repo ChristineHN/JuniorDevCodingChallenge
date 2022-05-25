@@ -4,7 +4,18 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 
 public abstract class Vehicle {
-	
+	@Override
+	public String toString() {
+		return
+				"Model: " + model +
+				" | VinNumber: " + vinNumber +
+				" | Color: " + color +
+				" | MSRP: " + msrp +
+				" | mpg City: " + mpgCity +
+				" | mpg Highway: " + mpgHighway +
+				" | Reserved: " + isReserved;
+	}
+
 	public Vehicle() {
 		features = new HashMap<String, String>();
 	}
