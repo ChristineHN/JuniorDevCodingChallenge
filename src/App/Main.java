@@ -72,6 +72,7 @@ public class Main {
 			String vinNumber = userInputScanner.nextLine();
 			
 			// TODO Call the method you created on the InventoryService to reserve a vehicle
+			_inventoryService.reserveVehicle(vinNumber);
 		}
 		catch(Exception e) {
 			System.out.println("Error reserving vehicle inventory: " + e.getMessage());
@@ -121,12 +122,13 @@ public class Main {
 	
 	private static void printVehicles(List<Vehicle> vehicles) {
 		for(Vehicle vehicle : vehicles) {
-			System.out.print("Model: " + vehicle.model + "  |  ");
-			System.out.print("Color: " + vehicle.color + "  |  ");
-			System.out.print("Price: " + vehicle.msrp + "  |  ");
-			System.out.print("Vin Number: " + vehicle.vinNumber);
-			System.out.println();
-			System.out.println();
+			System.out.println(vehicle);
+//			System.out.print("Model: " + vehicle.model + "  |  ");
+//			System.out.print("Color: " + vehicle.color + "  |  ");
+//			System.out.print("Price: " + vehicle.msrp + "  |  ");
+//			System.out.print("Vin Number: " + vehicle.vinNumber);
+//			System.out.println();
+//			System.out.println();
 		}
 	}
 }
